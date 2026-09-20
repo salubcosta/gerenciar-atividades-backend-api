@@ -1,0 +1,3 @@
+from routes.categoria_routes import categoria_bp
+from routes.projeto_routes import projeto_bp
+from routes.registro_routes import registro_bp

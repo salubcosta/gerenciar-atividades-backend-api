@@ -1,0 +1,4 @@
+from services.categoria_service import CategoriaService
+from services.projeto_service import ProjetoService
+from services.registro_service import RegistroService
+from services.pessoa_service import PessoaService
