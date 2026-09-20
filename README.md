@@ -221,7 +221,9 @@ Pessoa
 
 ---
 
-## Como Executar
+## Execução local caso queira testar sem o docker
+
+## Logo abaixo, em outra sessão, há detalhamento para execução via docker
 
 ### Pré-requisitos
 
