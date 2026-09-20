@@ -257,7 +257,7 @@ A aplicação estará disponível em: `http://localhost:5000`
 
 O banco de dados SQLite será criado automaticamente em `data/data.db` na primeira execução.
 
-### Executando com Docker
+## Executando com Docker
 
 Na raiz do projeto, construa a imagem:
 
@@ -265,16 +265,16 @@ Na raiz do projeto, construa a imagem:
 docker build -t gerenciar-atividades-backend .
 ```
 
-Inicie o container expondo a porta da API e montando o diretório do banco:
+Crie o volume para persistir os dados, assim, mesmo que pare o container, os daos serão persistidos.
 
 ```bash
-docker run --rm -p 5000:5000 -v "${PWD}/data:/app/data" gerenciar-atividades-backend
+docker volume create atividades-data
 ```
 
-No PowerShell do Windows, use:
+Em seguinda, inicie o container expondo a porta da API e montando o diretório do banco de dados :
 
-```powershell
-docker run --rm -p 5000:5000 -v "${PWD}/data:/app/data" gerenciar-atividades-backend
+```bash
+docker run --rm -p 5000:5000 -v atividades-data:/app/data gerenciar-atividades-backend
 ```
 
 O parâmetro `-v` mantém o banco SQLite no diretório `data/` do projeto mesmo depois que o container for encerrado.
@@ -282,7 +282,7 @@ O parâmetro `-v` mantém o banco SQLite no diretório `data/` do projeto mesmo 
 Para executar o container em segundo plano:
 
 ```bash
-docker run -d --name gerenciar-atividades-backend-api -p 5000:5000 -v "${PWD}/data:/app/data" gerenciar-atividades-backend
+docker run -d --name gerenciar-atividades-backend-api -p 5000:5000 -v atividades-data:/app/data gerenciar-atividades-backend
 ```
 
 Para encerrar e remover o container:
@@ -293,6 +293,19 @@ docker stop gerenciar-atividades-backend-api
 
 O arquivo `Dockerfile` instala as dependências, cria o diretório persistente do SQLite e inicia a aplicação na porta `5000`.
 
+Para visualizar todos os containers:
+
+```bash
+docker container ls --all
+```
+
+Para visualizar todas as imagens:
+
+```bash
+docker images
+ou
+docker image ls
+```
 ---
 
 ## Documentação Interativa
