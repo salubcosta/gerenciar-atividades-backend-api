@@ -175,6 +175,30 @@ Pessoa
 
 ---
 
+## API externa — ViaCEP
+
+O projeto consome o [ViaCEP](https://viacep.com.br), um webservice público e gratuito para consulta de endereços brasileiros a partir do CEP. A integração é usada nos endpoints de criação e atualização de pessoas: o backend consulta o CEP informado e preenche `logradouro`, `bairro`, `cidade` e `uf` antes de persistir os dados.
+
+| Informação | Detalhe |
+|------------|---------|
+| Serviço | [ViaCEP](https://viacep.com.br) |
+| Custo | Gratuito, conforme informado pelo provedor |
+| Cadastro/chave de API | Não é necessário para a rota utilizada; a requisição não envia credenciais |
+| Método e rota utilizada | `GET https://viacep.com.br/ws/{cep}/json/` |
+| Parâmetro | `{cep}` deve conter 8 dígitos; caracteres não numéricos são removidos pelo backend |
+| Formato consumido | JSON |
+| Sucesso | Retorna, entre outros campos, `cep`, `logradouro`, `complemento`, `bairro`, `localidade` e `uf` |
+| CEP inexistente | O ViaCEP responde JSON com `erro: true`; a API retorna `400` ao cliente |
+| Licença/termos | O site do ViaCEP não publica uma licença formal. Aplicam-se as [informações e condições de uso do serviço](https://viacep.com.br/), incluindo o aviso de que uso massivo para validação de bases locais pode ser bloqueado. |
+
+Exemplo de chamada externa:
+
+```http
+GET https://viacep.com.br/ws/72135120/json/
+```
+
+---
+
 ## Endpoints
 
 ### Categorias — `/categorias`
