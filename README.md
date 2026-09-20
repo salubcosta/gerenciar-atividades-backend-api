@@ -321,3 +321,8 @@ Apesar de, no requisito do projeto, a documentação da API seja construída com
 | RapiDoc    | `/openapi/rapidoc`         |
 | Scalar     | `/openapi/scalar`          |
 | RapiPDF    | `/openapi/rapipdf`         |
+
+## Autor do projeto
+
+**Salumão Barbosa da Costa**  
+Pós-graduando em Desenvolvimento Full Stack na PUC-Rio
