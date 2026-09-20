@@ -259,8 +259,8 @@ GET https://viacep.com.br/ws/72135120/json/
 
 ```bash
 # Clone o repositório
-git clone <url-do-repositorio>
-cd backend-atividades-por-projetos
+git clone https://github.com/salubcosta/gerenciar-atividades-backend-api.git
+cd gerenciar-atividades-backend-api
 
 # Crie e ative um ambiente virtual para encapsular as dependências do projeto
 python -m venv venv
@@ -282,6 +282,14 @@ A aplicação estará disponível em: `http://localhost:5000`
 O banco de dados SQLite será criado automaticamente em `data/data.db` na primeira execução.
 
 ## Executando com Docker
+
+Efetue o download do projeto ou clone o repositório como exemplificado abaixo:
+
+```bash
+# Clone o repositório
+git clone https://github.com/salubcosta/gerenciar-atividades-backend-api.git
+cd gerenciar-atividades-backend-api
+```
 
 Na raiz do projeto, construa a imagem:
 
