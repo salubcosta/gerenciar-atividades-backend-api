@@ -168,9 +168,10 @@ Pessoa
   └── uf (preenchida pelo ViaCEP)
 ```
 
-> Ao deletar um **Projeto**, todos os seus **Registros** são removidos automaticamente (cascade delete-orphan).<br>Categorias com projetos vinculados **não podem** ser deletadas.
+> Não é possível deletar um **Projeto** com **Registros** associados.
+> Categorias com projetos vinculados **não podem** ser deletadas.
 >
-> Ao criar ou atualizar uma **Pessoa**, o CEP é consultado na API [ViaCEP](https://viacep.com.br). O número e o bairro podem ser nulos para endereços que não possuem essas informações.
+> Ao criar ou atualizar uma **Pessoa**, o CEP é consultado na API [ViaCEP](https://viacep.com.br). O número e o bairro podem ser nulos para endereços que não possuem essas informações. A validação é realizada no backend.
 
 ---
 
