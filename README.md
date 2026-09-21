@@ -306,16 +306,10 @@ docker volume create atividades-data
 Em seguinda, inicie o container expondo a porta da API e montando o diretório do banco de dados :
 
 ```bash
-docker run --rm --name gerenciar-atividades-backend -p 5000:5000 -v atividades-data:/app/data gerenciar-atividades-backend
+docker run -d --name gerenciar-atividades-backend -p 5000:5000 -v atividades-data:/app/data gerenciar-atividades-backend
 ```
 
 O parâmetro `-v` mantém o banco SQLite no diretório `data/` do projeto mesmo depois que o container for encerrado.
-
-Para executar o container em segundo plano:
-
-```bash
-docker run -d --name gerenciar-atividades-backend -p 5000:5000 -v atividades-data:/app/data gerenciar-atividades-backend
-```
 
 Para encerrar e remover o container:
 
