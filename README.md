@@ -277,11 +277,11 @@ pip install -r requirements.txt
 python app.py
 ```
 
-A aplicação estará disponível em: `http://localhost:5000`
+A aplicação estará disponível em: <a href="http://localhost:5000" target="_blank">http://localhost:5000</a>
 
 O banco de dados SQLite será criado automaticamente em `data/data.db` na primeira execução.
 
-## Executando com Docker
+# Executando com Docker
 
 Efetue o download do projeto ou clone o repositório como exemplificado abaixo:
 
@@ -315,6 +315,7 @@ Para encerrar e remover o container:
 
 ```bash
 docker stop gerenciar-atividades-backend
+docker rm gerenciar-atividades-backend
 ```
 
 O arquivo `Dockerfile` instala as dependências, cria o diretório persistente do SQLite e inicia a aplicação na porta `5000`.
@@ -336,7 +337,7 @@ docker image ls
 
 ## Documentação Interativa
 
-Ao acessar `http://localhost:5000`, você será redirecionado automaticamente para a documentação Swagger. 
+Ao acessar <a href="http://localhost:5000" target="_blank">http://localhost:5000</a>, você será redirecionado automaticamente para a documentação Swagger. 
 
 Apesar de, no requisito do projeto, a documentação da API seja construída com Swagger (OpenAPI), as seguintes interfaces de documentação também estão disponíveis:
 
