@@ -289,7 +289,7 @@ O banco de dados SQLite será criado automaticamente em `data/data.db` na primei
 
 # Executando com Docker
 
-Efetue o download do projeto ou clone o repositório como exemplificado abaixo:
+### 1. Efetue o download do projeto ou clone o repositório como exemplificado abaixo:
 
 ```bash
 # Clone o repositório
@@ -298,25 +298,26 @@ git clone https://github.com/salubcosta/gerenciar-atividades-backend-api.git
 cd gerenciar-atividades-backend-api
 ```
 
-Na raiz do projeto, construa a imagem:
+### 2. Na raiz do projeto, construa a imagem:
 
 ```bash
 docker build -t gerenciar-atividades-backend .
 ```
 
-Crie o volume para persistir os dados, assim, mesmo que pare o container, os daos serão persistidos.
+### 3. Crie o volume para persistir os dados, assim, mesmo que pare o container, os daos serão persistidos.
 
 ```bash
 docker volume create atividades-data
 ```
 
-Em seguinda, inicie o container expondo a porta da API e montando o diretório do banco de dados :
+### 4. Em seguinda, inicie o container expondo a porta da API e montando o diretório do banco de dados :
 
 ```bash
 docker run -d --name gerenciar-atividades-backend -p 5000:5000 -v atividades-data:/app/data gerenciar-atividades-backend
 ```
 
-A aplicação estará disponível em: <a href="http://localhost:5000" target="_blank">http://localhost:5000</a>.
+### 5. A aplicação estará disponível em: 
+<a href="http://localhost:5000" target="_blank">http://localhost:5000</a>
 
 Observação: o parâmetro `-v` mantém o banco SQLite no diretório `data/` do projeto mesmo depois que o container for encerrado.
 
