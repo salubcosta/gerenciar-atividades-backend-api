@@ -72,7 +72,11 @@ Routes → Services → Repositories → Models → Database
 - **Models** — mapeamento ORM das tabelas do banco de dados
 - **Schemas** — validação de entrada e serialização de saída com Pydantic
 
-### Arquitetura da solução <small><i>MACRO</i></small>
+## Arquitetura da solução <small><i>(Cenário 1.1)</i></small>
+
+Conforme requisito do MVP, a implementação foi construída de acordo com o cenário 1.1, onde temos um frontend que se comunicação com o backend e este, faz a comunicação com API Externa e persiste dados no banco de dados.
+
+Segue desenho da arquitetura:
 
 <img src="./figure/arquitetura.png" width="100%">
 
