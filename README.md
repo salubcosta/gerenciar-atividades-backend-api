@@ -319,6 +319,8 @@ docker run -d --name gerenciar-atividades-backend -p 5000:5000 -v atividades-dat
 ### 5. A aplicação estará disponível em: 
 <a href="http://localhost:5000" target="_blank">http://localhost:5000</a>
 
+<hr>
+
 Observação: o parâmetro `-v` mantém o banco SQLite no diretório `data/` do projeto mesmo depois que o container for encerrado.
 
 Para encerrar e remover o container:
