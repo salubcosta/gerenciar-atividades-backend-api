@@ -309,7 +309,9 @@ Em seguinda, inicie o container expondo a porta da API e montando o diretório d
 docker run -d --name gerenciar-atividades-backend -p 5000:5000 -v atividades-data:/app/data gerenciar-atividades-backend
 ```
 
-O parâmetro `-v` mantém o banco SQLite no diretório `data/` do projeto mesmo depois que o container for encerrado.
+A aplicação estará disponível em: <a href="http://localhost:5000" target="_blank">http://localhost:5000</a>.
+
+Observação: o parâmetro `-v` mantém o banco SQLite no diretório `data/` do projeto mesmo depois que o container for encerrado.
 
 Para encerrar e remover o container:
 
