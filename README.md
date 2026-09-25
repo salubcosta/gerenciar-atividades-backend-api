@@ -78,8 +78,7 @@ Conforme requisito do MVP, a implementação foi construída de acordo com o cen
 
 Segue desenho da arquitetura:
 
-<img src="./figure/arquitetura.png" width="100%">
-
+![Arquitetura](figure/arquitetura.svg)
 
 ### Arquitetura da solução <small>+detalhes</small>
 
